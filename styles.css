@@ -1,3 +1,6 @@
+@import url("/media-queries.css")
+(max-width: 900px);
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,6 +21,19 @@
 
 html {
 	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--c-light-200);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--c-primary);
+	border-radius: 10px;
 }
 
 body {
@@ -86,11 +102,11 @@ h1 > span {
 
 .cta img {
 	width: 30px;
-	animation: arrowDown 5s linear 0s infinite normal forwards;
+	animation: toUp 5s linear 0s infinite normal forwards;
 	margin-bottom: 80px;
 }
 
-@keyframes arrowDown {
+@keyframes toUp {
 	0%,
 	100% {
 		transform: translateY(0);
@@ -119,9 +135,9 @@ h1 > span {
 }
 
 #projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 60px;
 }
 
 .project {
@@ -138,8 +154,7 @@ h1 > span {
 	text-transform: uppercase;
 	text-align: center;
 	border-radius: 30px;
-	width: 100%;
-	padding-block: 8px;
+	padding: 8px 28px;
 }
 
 .poster-art img {
@@ -148,6 +163,55 @@ h1 > span {
 }
 
 .packaging-design img {
-  width: 108px;
+	width: 108px;
 	transform: rotate(5deg);
+}
+
+.ux-ui img {
+	width: 121px;
+	transform: rotate(-2deg);
+}
+
+.social-media img {
+	width: 290px;
+	transform: rotate(-3deg);
+}
+
+.print-design img {
+	width: 232px;
+	transform: rotate(5deg);
+}
+
+.three-d-modeling img {
+	width: 208px;
+	transform: rotate(-8deg);
+}
+
+footer {
+	margin: 100px 0px;
+	display: flex;
+	gap: 60px;
+}
+
+footer a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	transition: all 0.5s ease-in-out;
+}
+
+footer a:hover {
+	opacity: 0.8;
+	animation: toUp 5s linear 0s infinite normal forwards;
+}
+
+footer img {
+	width: 80px;
+}
+
+footer span {
+	font-size: 1.2rem;
+	font-style: italic;
+	color: var(--c-dark);
 }
