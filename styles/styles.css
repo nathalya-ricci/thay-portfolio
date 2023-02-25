@@ -1,5 +1,4 @@
-@import url("/media-queries.css")
-(max-width: 900px);
+@import url("./keyframes.css");
 
 * {
 	margin: 0;
@@ -36,6 +35,10 @@ html {
 	border-radius: 10px;
 }
 
+/* keyframes */
+
+/* main styles */
+
 body {
 	font-family: var(--ff-sans);
 	color: var(--c-dark);
@@ -53,29 +56,56 @@ body {
 	margin-top: 20px;
 }
 
-#presentation > img {
+.images {
+	position: relative;
+}
+
+.images #computer {
 	width: 440px;
 	transform: rotate(-6deg);
+	position: relative;
+	z-index: -1;
+}
+
+.images #computer-star {
+	width: 40px;
+	position: absolute;
+	bottom: 170px;
+	left: 25px;
+	animation: toLeft 0.8s ease-in-out 0s infinite alternate both;
 }
 
 #presentation > .text {
 	width: 375px;
 	text-align: left;
+	position: relative;
 }
 
-h1 {
+.text img {
+	width: 30px;
+	transform: rotate(-20deg);
+	position: absolute;
+	bottom: 224px;
+	left: 34px;
+}
+
+.text img:hover {
+	animation: toTop 0.8s ease-in-out 0s infinite alternate both;
+}
+
+.text h1 {
 	font-family: var(--ff-serif);
 	font-weight: 500;
 	font-size: 2rem;
 	line-height: 0.8;
 }
 
-h1 > span {
+.text h1 > span {
 	text-decoration: underline;
 	font-style: italic;
 }
 
-#presentation p {
+.text p {
 	font-size: 1rem;
 	line-height: 1.2;
 	margin-top: 12px;
@@ -102,36 +132,8 @@ h1 > span {
 
 .cta img {
 	width: 30px;
-	animation: toUp 5s linear 0s infinite normal forwards;
+	animation: toBottom 5s linear 0s infinite normal forwards;
 	margin-bottom: 80px;
-}
-
-@keyframes toUp {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-
-	10%,
-	30%,
-	50%,
-	70% {
-		transform: translateY(-8px);
-	}
-
-	20%,
-	40%,
-	60% {
-		transform: translateY(8px);
-	}
-
-	80% {
-		transform: translateY(6.4px);
-	}
-
-	90% {
-		transform: translateY(-6.4px);
-	}
 }
 
 #projects {
@@ -145,6 +147,12 @@ h1 > span {
 	flex-direction: column;
 	align-items: center;
 	gap: 25px;
+	transition: all 0.5s ease-in-out;
+}
+
+.project:hover {
+	opacity: 0.8;
+	animation: rotate 2s ease-in-out 0s normal forwards;
 }
 
 .project a {
