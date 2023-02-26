@@ -1,0 +1,174 @@
+@import url("styles.css");
+@import url("./keyframes.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+}
+
+:root {
+	--ff-sans: "DM Sans", sans-serif;
+	--ff-serif: "DM Serif Text", serif;
+	--c-dark: #353535;
+	--c-primary: #569de4;
+	--c-light: #fff;
+	--c-light-200: #f9f9f9;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--c-light-200);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--c-primary);
+	border-radius: 10px;
+}
+
+/* media-queries */
+
+@media screen and (max-width: 900px) {
+	.images #computer {
+		width: 320px;
+	}
+
+	.images #computer-star {
+		bottom: 115px;
+		left: 12px;
+	}
+
+	#projects {
+		grid-template-columns: repeat(2, 1fr);
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	.images #computer {
+		width: 260px;
+	}
+
+	.images #computer-star {
+		width: 30px;
+		bottom: 100px;
+		left: 14px;
+	}
+
+	#presentation > .text {
+		width: 300px;
+	}
+
+	.text img {
+		width: 20px;
+		bottom: 193px;
+		left: 28px;
+	}
+
+	.text h1 {
+		font-size: 1.5rem;
+	}
+
+	.text p {
+		font-size: 0.875rem;
+	}
+
+	.cta > h2 {
+		font-size: 1.5rem;
+	}
+
+	#projects {
+		grid-template-columns: repeat(2, 1fr);
+		margin-right: 20px;
+	}
+
+	.poster-art img {
+		width: 185px;
+	}
+
+	.packaging-design img {
+		width: 100px;
+	}
+
+	.ux-ui img {
+		width: 100px;
+	}
+
+	.social-media img {
+		width: 250px;
+	}
+
+	.print-design img {
+		width: 210px;
+	}
+
+	.three-d-modeling img {
+		width: 190px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 739px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		padding-left: 20px;
+	}
+
+	#presentation {
+		flex-direction: column;
+	}
+
+	.images #computer {
+		width: 320px;
+		margin-left: 50px;
+		transform: rotate(0deg);
+	}
+
+	.images #computer-star {
+		width: 30px;
+		bottom: 135px;
+		left: 65px;
+	}
+
+	.text img {
+		width: 20px;
+		bottom: 275px;
+		left: 85px;
+	}
+
+	.text h1 {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.text p {
+		font-size: 1rem;
+		margin-top: 40px;
+		text-align: left;
+	}
+
+	.cta > h2 {
+		font-size: 1.5rem;
+	}
+
+	#projects {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
